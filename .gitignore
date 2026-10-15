@@ -1,0 +1,31 @@
+# Never commit secrets / local tool configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Main Kaggle file is several gigabytes; distribute via the source link, not Git.
+data/*
+!data/README.md
+
+# Keep the pre-generated source fixtures (CSV/JSONL/manifest.json) under Git.
+# Only generated solutions / local exports should be ignored.
+output/
+outputs/
+exports/
+logs/
+*.log
+
+# Local runtime and editor files
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+node_modules/
+target/
+.gradle/
+.idea/
+.vscode/
+.DS_Store
